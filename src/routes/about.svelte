@@ -1,5 +1,6 @@
 <script context="module">
 	import { browser, dev } from '$app/env';
+	import { base } from '$app/paths';
 
 	// we don't need any JS on this page, though we'll load
 	// it in dev so that we get hot module replacement...
@@ -19,6 +20,15 @@
 	<meta name="description" content="About this app" />
 </svelte:head>
 
+<script lang="ts">
+	// function build_href(value: string) {
+	// 	if(dev) {
+	// 		return value;
+	// 	}
+	// 	return `/comix-sense${value}`
+	// }
+</script>
+
 <div class="content">
 	<h1>About this app</h1>
 
@@ -36,7 +46,7 @@
 	</p>
 
 	<p>
-		The <a href="/comix-sense/todos">TODOs</a> page illustrates SvelteKit's data loading and form handling. Try using
+		The <a href="{base}/todos">TODOs</a> page illustrates SvelteKit's data loading and form handling. Try using
 		it with JavaScript disabled!
 	</p>
 </div>

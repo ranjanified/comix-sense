@@ -1,9 +1,12 @@
 <script context="module" lang="ts">
+	import { dev } from "$app/env";
 	export const prerender = true;
 </script>
 
 <script lang="ts">
 	import Counter from '$lib/Counter.svelte';
+	import { base } from '$app/paths';
+
 </script>
 
 <svelte:head>
@@ -15,8 +18,8 @@
 	<h1>
 		<span class="welcome">
 			<picture>
-				<source srcset="/comix-sense/svelte-welcome.webp" type="image/webp" />
-				<img src="/comix-sense/svelte-welcome.png" alt="Welcome" />
+				<source srcset="{base}/svelte-welcome.webp" type="image/webp" />
+				<img src="{base}/svelte-welcome.png" alt="Welcome" />
 			</picture>
 		</span>
 

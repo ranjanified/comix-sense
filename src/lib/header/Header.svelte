@@ -1,6 +1,14 @@
 <script lang="ts">
 	import { page } from '$app/stores';
+	import { base } from '$app/paths';
 	import logo from './svelte-logo.svg';
+
+	// function build_href(value: string) {
+	// 	if(dev) {
+	// 		return value;
+	// 	}
+	// 	return `/comix-sense${value}`
+	// }
 </script>
 
 <header>
@@ -15,12 +23,12 @@
 			<path d="M0,0 L1,2 C1.5,3 1.5,3 2,3 L2,0 Z" />
 		</svg>
 		<ul>
-			<li class:active={$page.url.pathname === '/'}><a sveltekit:prefetch href="/comix-sense">Home</a></li>
+			<li class:active={$page.url.pathname === '/'}><a sveltekit:prefetch href="{base}/">Home</a></li>
 			<li class:active={$page.url.pathname === '/about'}>
-				<a sveltekit:prefetch href="/comix-sense/about">About</a>
+				<a sveltekit:prefetch href="{base}/about">About</a>
 			</li>
 			<li class:active={$page.url.pathname === '/todos'}>
-				<a sveltekit:prefetch href="/comix-sense/todos">Todos</a>
+				<a sveltekit:prefetch href="{base}/todos">Todos</a>
 			</li>
 		</ul>
 		<svg viewBox="0 0 2 3" aria-hidden="true">
